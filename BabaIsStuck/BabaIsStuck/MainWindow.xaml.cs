@@ -31,16 +31,29 @@ namespace BabaIsStuck
             var prepostions = stkPrepositions.Children.OfType<CheckBox>().Where(x => x.IsChecked.Value).Select(x => x.Content.ToString());
             var verbs = stkVerbs.Children.OfType<CheckBox>().Where(x => x.IsChecked.Value).Select(x => x.Content.ToString());
 
-            var combos = from n in nouns
+            var verbNounCombos = from n in nouns
                          from p in prepostions
                          from v in verbs
                          select $"{n} {p} {v}";
 
+            var nounNounCombos = from n in nouns
+                                 from n2 in nouns
+                                 from p in prepostions
+                                 where p == "Is"
+                                 select $"{n} {p} {n2}"
+                                 ;
+
             StringBuilder sb = new StringBuilder();
-            foreach(string combo in combos)
+            foreach(string combo in verbNounCombos)
             {
                 sb.AppendLine(combo);
             }
+
+            foreach (string combo in nounNounCombos)
+            {
+                sb.AppendLine(combo);
+            }        
+
             tbxSolutions.Text = sb.ToString();
         }
     }
