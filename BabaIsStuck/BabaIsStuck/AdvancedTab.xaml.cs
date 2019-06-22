@@ -13,18 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace BabaIsStuck
+namespace BabaIsStuck.UserControls
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for AdvancedTab.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class AdvancedTab : UserControl
     {
-        public MainWindow()
+        public AdvancedTab()
         {
             InitializeComponent();
         }
-
-        
     }
 }

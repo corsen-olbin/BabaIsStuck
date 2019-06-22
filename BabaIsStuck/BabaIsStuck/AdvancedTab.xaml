@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="BabaIsStuck.UserControls.AdvancedTab"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BabaIsStuck"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <StackPanel Background="White">
+            <WrapPanel>
+                <GroupBox Name="gbxSetVerbs" Header="Verb" Margin="10" Padding="10">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+                        <xctk:IntegerUpDown Name="iudBaba" Grid.Column="0" Width="50" Margin="0 5"/>
+                        <Label Grid.Column="1" Margin="0 5">BABA</Label>
+                        <xctk:IntegerUpDown Name="iudRock" Grid.Column="0" Grid.Row="1" Width="50" Margin="0 5"/>
+                        <Label Grid.Column="1" Grid.Row="1" Margin="0 5">ROCK</Label>
+                    </Grid>
+                </GroupBox>
+            </WrapPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>
