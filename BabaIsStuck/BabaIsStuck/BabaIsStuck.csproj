@@ -83,6 +83,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="IntegerUpDownWLabel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -90,6 +94,12 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConjunctionTypes.cs" />
+    <Compile Include="DescriptorTypes.cs" />
+    <Compile Include="IncompleteSentenceException.cs" />
+    <Compile Include="IntegerUpDownWLabel.xaml.cs">
+      <DependentUpon>IntegerUpDownWLabel.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -101,6 +111,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NounTypes.cs" />
+    <Compile Include="Sentence.cs" />
+    <Compile Include="VerbTypes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

@@ -16,14 +16,14 @@
                         <CheckBox>ROCK</CheckBox>
                     </StackPanel>
                 </GroupBox>
-                <GroupBox Name="gbxPrepositions" Header="Preposition" Margin="10" Padding="10">
-                    <StackPanel Name="stkPrepositions">
-                        <CheckBox>Is</CheckBox>
-                        <CheckBox>Has</CheckBox>
+                <GroupBox Name="gbxVerbs" Header="Verbs" Margin="10" Padding="10">
+                    <StackPanel Name="stkVerbs">
+                        <CheckBox>IS</CheckBox>
+                        <CheckBox>HAS</CheckBox>
                     </StackPanel>
                 </GroupBox>
-                <GroupBox Name="gbxVerbs" Header="Verb" Margin="10" Padding="10">
-                    <StackPanel Name="stkVerbs">
+                <GroupBox Name="gbxDescriptors" Header="Descriptors" Margin="10" Padding="10">
+                    <StackPanel Name="stkDescriptors">
                         <CheckBox>YOU</CheckBox>
                         <CheckBox>PUSH</CheckBox>
                         <CheckBox>DEFEAT</CheckBox>
