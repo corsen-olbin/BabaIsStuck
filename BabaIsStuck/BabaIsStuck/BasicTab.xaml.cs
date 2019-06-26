@@ -28,19 +28,19 @@ namespace BabaIsStuck.UserControls
         private void BtnGo_Click(object sender, RoutedEventArgs e)
         {
             var nouns = stkNouns.Children.OfType<CheckBox>().Where(x => x.IsChecked.Value).Select(x => x.Content.ToString());
-            var prepostions = stkPrepositions.Children.OfType<CheckBox>().Where(x => x.IsChecked.Value).Select(x => x.Content.ToString());
             var verbs = stkVerbs.Children.OfType<CheckBox>().Where(x => x.IsChecked.Value).Select(x => x.Content.ToString());
+            var descriptors = stkDescriptors.Children.OfType<CheckBox>().Where(x => x.IsChecked.Value).Select(x => x.Content.ToString());
 
             var verbNounCombos = from n in nouns
-                                 from p in prepostions
                                  from v in verbs
-                                 select $"{n} {p} {v}";
+                                 from d in descriptors
+                                 select $"{n} {v} {d}";
 
             var nounNounCombos = from n in nouns
                                  from n2 in nouns
-                                 from p in prepostions
-                                 where p == "Is"
-                                 select $"{n} {p} {n2}"
+                                 from v in verbs
+                                 where v == "Is"
+                                 select $"{n} {v} {n2}"
                                  ;
 
             StringBuilder sb = new StringBuilder();

@@ -59,9 +59,14 @@ namespace BabaIsStuck
             StringBuilder sb = new StringBuilder();
 
             if (!IsComplete())
-                throw IncompleteSentenceException();
+                throw new IncompleteSentenceException(this);
 
+            sb.Append($"{Noun.ToString()} {Verb.ToString()} {Descriptor.ToString()}");
 
+            for (int i = 0; i < ExtraDescriptors.Count; i++)
+            {
+                sb.Append($" {Conjunctions[i].ToString()} {ExtraDescriptors[i].ToString()}");
+            }
             return sb.ToString();
         }
     }
