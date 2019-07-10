@@ -79,7 +79,19 @@
     <Compile Include="BasicTab.xaml.cs">
       <DependentUpon>BasicTab.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DraggableTextBox.xaml.cs">
+      <DependentUpon>DraggableTextBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Word.cs" />
     <Page Include="AdvancedTab.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DraggableTextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ExperimentalTab.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -97,6 +109,10 @@
     </Compile>
     <Compile Include="ConjunctionTypes.cs" />
     <Compile Include="DescriptorTypes.cs" />
+    <Compile Include="ExperimentalTab.xaml.cs">
+      <DependentUpon>ExperimentalTab.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GameBoard.cs" />
     <Compile Include="IncompleteSentenceException.cs" />
     <Compile Include="IntegerUpDownWLabel.xaml.cs">
       <DependentUpon>IntegerUpDownWLabel.xaml</DependentUpon>

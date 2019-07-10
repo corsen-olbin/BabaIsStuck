@@ -15,7 +15,7 @@
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
-        <xctk:IntegerUpDown Value="{Binding Number}" Grid.Column="0" Margin="0 5"/>
+        <xctk:IntegerUpDown Height="20" Value="{Binding Number}" Grid.Column="0" Margin="0 5"/>
         <Label Content="{Binding Title}" Grid.Column="1" Margin="0 5"/>
     </Grid>
 </UserControl>

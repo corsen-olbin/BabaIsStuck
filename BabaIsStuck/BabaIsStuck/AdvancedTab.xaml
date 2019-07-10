@@ -29,7 +29,7 @@
                 </GroupBox>
             </WrapPanel>
             <Button Name="btnGo" Click="BtnGo_Click" Width="40" Margin="25 0" HorizontalAlignment="Left">Go</Button>
-            <WrapPanel  Margin="10" Name="wrpSets"></WrapPanel>
+            <WrapPanel Height="265" Background="LightGray" Margin="10" Name="wrpSets"></WrapPanel>
         </StackPanel>
     </Grid>
 </UserControl>

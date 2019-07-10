@@ -16,6 +16,9 @@
             <TabItem Header="Advanced" Width="80">
                 <uc:AdvancedTab/>
             </TabItem>
+            <TabItem Header="Experimental" Width="80">
+                <uc:ExperimentalTab/>
+            </TabItem>
         </TabControl>
         
     </Grid>
