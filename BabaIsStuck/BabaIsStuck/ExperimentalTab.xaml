@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              xmlns:uc="clr-namespace:BabaIsStuck.UserControls" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="White">
+    <Grid Name="ExperimentalGrid" Background="White">
         <Grid.Resources>
             <Style TargetType="Rectangle">
                 <Setter Property="AllowDrop" Value="True"/>
@@ -34,7 +34,7 @@
         <Rectangle Grid.Row="2" Grid.Column="0"/>
         <Rectangle Grid.Row="2" Grid.Column="1"/>
         <Rectangle Grid.Row="2" Grid.Column="2"/>
-        <uc:DraggableTextBox Word="BABA" Grid.Row="0" AllowDrop="True" Drop="DraggableTextBox_Drop"/>
+        <uc:DraggableTextBox Word="BABA" Grid.Row="0" AllowDrop="True" Drop="DraggableTextBox_Drop" />
         <uc:DraggableTextBox Word="IS" Grid.Row="0" Grid.Column="1" AllowDrop="True" Drop="DraggableTextBox_Drop"/>
         <uc:DraggableTextBox Word="You" Grid.Row="0" Grid.Column="2" AllowDrop="True" Drop="DraggableTextBox_Drop"/>
         <uc:DraggableTextBox Word="BABA" Grid.Row="1" AllowDrop="True" Drop="DraggableTextBox_Drop"/>

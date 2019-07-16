@@ -23,6 +23,9 @@ namespace BabaIsStuck.UserControls
         public ExperimentalTab()
         {
             InitializeComponent();
+            var textBoxList = ExperimentalGrid.Children.OfType<DraggableTextBox>().ToList();
+
+            textBoxList.ForEach(x => x.DragEnter += DraggableTextBox_DragEnter);
             PrintSampleGrid();
         }
 
@@ -55,6 +58,21 @@ namespace BabaIsStuck.UserControls
                     string temp = draggableTextBox.Word;
                     draggableTextBox.Word = element.Word;
                     element.Word = temp;
+                }
+            }
+        }
+
+        private void DraggableTextBox_DragEnter(object sender, DragEventArgs e)
+        {
+            if (!e.Handled)
+            {
+                DraggableTextBox receiver = (DraggableTextBox)sender;
+
+                DraggableTextBox element = (DraggableTextBox)e.Data.GetData("Object");
+
+                if (receiver != null && element != null)
+                {
+                    receiver.Word = element.Word;
                 }
             }
         }

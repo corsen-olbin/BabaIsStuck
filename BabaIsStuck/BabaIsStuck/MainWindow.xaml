@@ -6,10 +6,53 @@
         xmlns:local="clr-namespace:BabaIsStuck"
         xmlns:uc ="clr-namespace:BabaIsStuck.UserControls"
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:ribbon="clr-namespace:System.Windows.Controls.Ribbon;assembly=System.Windows.Controls.Ribbon"
         mc:Ignorable="d"
         Title="Baba Is Stuck" Height="463.487" Width="800">
     <Grid>
-        <TabControl>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <ribbon:Ribbon x:Name="Ribbon" Title="Ribbon Title" Grid.Row="0">
+            <ribbon:Ribbon.HelpPaneContent>
+                <ribbon:RibbonButton Label="button1" />
+            </ribbon:Ribbon.HelpPaneContent>
+            <ribbon:Ribbon.QuickAccessToolBar>
+                <ribbon:RibbonQuickAccessToolBar >
+                    <ribbon:RibbonButton x:Name="QATButton1" 
+                                         Label="button2" />
+                    <ribbon:RibbonButton x:Name="QATButton2" 
+                                         Label="button3" />
+                </ribbon:RibbonQuickAccessToolBar>
+            </ribbon:Ribbon.QuickAccessToolBar>
+            <ribbon:Ribbon.ApplicationMenu>
+                <ribbon:RibbonApplicationMenu Label="button4">
+                    <ribbon:RibbonApplicationMenuItem Header="Hello _Ribbon"
+                                                      x:Name="MenuItem1"
+                                                      />
+                </ribbon:RibbonApplicationMenu>
+            </ribbon:Ribbon.ApplicationMenu>
+            <ribbon:RibbonTab x:Name="HomeTab" 
+                              Header="Home">
+                <ribbon:RibbonGroup x:Name="Group1" 
+                                    Header="Group1">
+                    <ribbon:RibbonButton x:Name="Button1"
+                                         
+                                         Label="Button1" />
+                    <ribbon:RibbonButton x:Name="Button2"
+                                         
+                                         Label="Button2" />
+                    <ribbon:RibbonButton x:Name="Button3"
+                                         
+                                         Label="Button3" />
+                    <ribbon:RibbonButton x:Name="Button4"
+                                         
+                                         Label="Button4" />
+                </ribbon:RibbonGroup>
+            </ribbon:RibbonTab>
+        </ribbon:Ribbon>
+        <TabControl Grid.Row="1">
             <TabItem Header="Basic" Width="80">
                 <uc:BasicTab/>
             </TabItem>
